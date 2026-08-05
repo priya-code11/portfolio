@@ -3,100 +3,248 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Priya Prajapati - Portfolio</title>
+  <title>Priya Prajapati | Backend & Full-Stack Developer</title>
+  <meta name="description" content="Priya Prajapati — B.Tech CSE student building real-time systems, APIs, and data-driven platforms with Node.js, Django, and Prisma." />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">Priya.dev</div>
+    <div class="logo">priya<span class="accent">@</span>dev<span class="cursor-inline">_</span></div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
+  <!-- Hero -->
   <header class="hero">
-    <h1>Hi, I'm <span class="highlight">Priya Prajapati</span> 👋</h1>
-    <p class="tagline">B.Tech CSE Student at Indus University | Backend & Web Developer</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <div class="hero-copy">
+      <span class="status-pill"><span class="dot-live"></span> STATUS: OPEN_TO_WORK</span>
+      <h1>Priya <span class="accent">Prajapati</span></h1>
+      <p class="tagline">Backend & full-stack developer building <strong>real-time systems</strong>, APIs, and data-driven platforms with Node.js, Django, and Prisma.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> View Projects</a>
+        <a href="https://github.com/priya-code11" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+
+    <!-- Enhanced Hand-built Vector Avatar -->
+    <!-- Sleek & Stylish Vector Avatar -->
+    <div class="hero-avatar-wrapper" aria-label="Stylized vector illustration of a developer">
+      <svg class="hero-avatar" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Background Glows -->
+          <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffb454" stop-opacity="0.2"/>
+            <stop offset="60%" stop-color="#5ec9c0" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#0a0d12" stop-opacity="0"/>
+          </radialGradient>
+
+          <!-- Hair Highlight Gradient -->
+          <linearGradient id="hairHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2d3748"/>
+            <stop offset="100%" stop-color="#1a202c"/>
+          </linearGradient>
+
+          <!-- Hoodie Gradient -->
+          <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffb454"/>
+            <stop offset="100%" stop-color="#e09234"/>
+          </linearGradient>
+
+          <!-- Soft Drop Shadow -->
+          <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+          </filter>
+        </defs>
+
+        <!-- Ambient Backdrop -->
+        <circle cx="250" cy="240" r="200" fill="url(#bgGlow)"/>
+        <circle cx="250" cy="240" r="165" fill="#10141b" stroke="rgba(255, 255, 255, 0.06)" stroke-width="2"/>
+
+        <!-- Floating Skill Badges -->
+        <g class="float-badge b1" filter="url(#softShadow)">
+          <rect x="40" y="80" width="95" height="36" rx="18" fill="#161b22" stroke="#5ec9c0" stroke-width="1.5"/>
+          <text x="87" y="103" fill="#5ec9c0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Node.js</text>
+        </g>
+
+        <g class="float-badge b2" filter="url(#softShadow)">
+          <rect x="360" y="100" width="90" height="36" rx="18" fill="#161b22" stroke="#ffb454" stroke-width="1.5"/>
+          <text x="405" y="123" fill="#ffb454" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Python</text>
+        </g>
+
+        <g class="float-badge b3" filter="url(#softShadow)">
+          <rect x="345" y="270" width="115" height="36" rx="18" fill="#161b22" stroke="#5ec9c0" stroke-width="1.5"/>
+          <text x="402" y="293" fill="#5ec9c0" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle">WebSockets</text>
+        </g>
+
+        <g class="float-badge b4" filter="url(#softShadow)">
+          <rect x="35" y="260" width="90" height="36" rx="18" fill="#161b22" stroke="#ffb454" stroke-width="1.5"/>
+          <text x="80" y="283" fill="#ffb454" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Prisma</text>
+        </g>
+
+        <!-- PORTRAIT CHARACTER -->
+        <!-- Hair Back Layer (Long Flowing Hair) -->
+        <path d="M 155 220 C 140 330, 160 380, 175 410 L 325 410 C 340 380, 360 330, 345 220 C 340 130, 160 130, 155 220 Z" fill="#11161d" />
+
+        <!-- Neck & Shoulders -->
+        <path d="M 140 410 C 140 345, 360 345, 360 410 Z" fill="url(#hoodieGrad)" />
+        <path d="M 225 320 L 250 365 L 275 320 Z" fill="#c47a21" /> <!-- Collar -->
+        <rect x="233" y="260" width="34" height="65" rx="12" fill="#f1b593" /> <!-- Neck -->
+        <path d="M 233 300 Q 250 312 267 300 Z" fill="#dd9c77" opacity="0.6"/> <!-- Neck Shadow -->
+
+        <!-- Head Contour -->
+        <path d="M 205 210 C 205 160, 295 160, 295 210 C 295 260, 275 285, 250 285 C 225 285, 205 260, 205 210 Z" fill="#f8c3a5" />
+
+        <!-- Facial Features -->
+        <!-- Eyebrows -->
+        <path d="M 218 198 Q 230 193 238 198" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M 262 198 Q 270 193 282 198" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" />
+
+        <!-- Eyes & Eyelashes -->
+        <ellipse cx="228" cy="210" rx="6" ry="7" fill="#1a202c" />
+        <ellipse cx="272" cy="210" rx="6" ry="7" fill="#1a202c" />
+        <circle cx="230" cy="208" r="2" fill="#ffffff" /> <!-- Pupil Highlight -->
+        <circle cx="274" cy="208" r="2" fill="#ffffff" />
+        <path d="M 220 205 Q 228 200 236 205" fill="none" stroke="#1a202c" stroke-width="2" />
+        <path d="M 264 205 Q 272 200 280 205" fill="none" stroke="#1a202c" stroke-width="2" />
+
+        <!-- Cheeks Blush -->
+        <ellipse cx="218" cy="225" rx="8" ry="4" fill="#ff7b7b" opacity="0.25" />
+        <ellipse cx="282" cy="225" rx="8" ry="4" fill="#ff7b7b" opacity="0.25" />
+
+        <!-- Nose & Lips -->
+        <path d="M 248 220 Q 250 226 252 220" fill="none" stroke="#e09c78" stroke-width="2" stroke-linecap="round" />
+        <path d="M 240 242 Q 250 250 260 242" fill="none" stroke="#d96b6b" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Stylish Glasses (Teal Wireframe) -->
+        <rect x="210" y="196" width="34" height="26" rx="8" fill="rgba(94, 201, 192, 0.08)" stroke="#5ec9c0" stroke-width="2.5"/>
+        <rect x="256" y="196" width="34" height="26" rx="8" fill="rgba(94, 201, 192, 0.08)" stroke="#5ec9c0" stroke-width="2.5"/>
+        <line x1="244" y1="206" x2="256" y2="206" stroke="#5ec9c0" stroke-width="2.5"/>
+        <line x1="198" y1="204" x2="210" y2="204" stroke="#5ec9c0" stroke-width="2"/>
+        <line x1="290" y1="204" x2="302" y2="204" stroke="#5ec9c0" stroke-width="2"/>
+
+        <!-- Hair Front (Modern Side Part & Waves) -->
+        <path d="M 200 210 C 195 150, 260 135, 295 160 C 305 180, 300 210, 298 230 C 290 195, 275 170, 248 185 C 225 198, 210 180, 200 210 Z" fill="url(#hairHighlight)" />
+        <path d="M 195 215 C 192 245, 185 285, 205 320 C 195 280, 200 240, 205 210 Z" fill="#1a202c" />
+
+        <!-- Over-Ear Headphones (Tech Vibe) -->
+        <rect x="190" y="200" width="12" height="28" rx="6" fill="#5ec9c0" />
+        <rect x="298" y="200" width="12" height="28" rx="6" fill="#5ec9c0" />
+        <path d="M 196 200 C 196 145, 304 145, 304 200" fill="none" stroke="#2d3748" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I am currently pursuing my B.Tech in Computer Science and Engineering at Indus University. 
-      I love building dynamic web applications and backend solutions using Node.js, Prisma, and Django. 
-      Passionate about technology, design, and continuous learning!
-    </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>Skills & Technologies</h2>
-    <div class="skills-grid">
-      <span class="skill-chip">Node.js</span>
-      <span class="skill-chip">Prisma ORM</span>
-      <span class="skill-chip">Django</span>
-      <span class="skill-chip">MongoDB</span>
-      <span class="skill-chip">Python</span>
-      <span class="skill-chip">C / C++</span>
-      <span class="skill-chip">Java</span>
-      <span class="skill-chip">HTML5</span>
-      <span class="skill-chip">Figma</span>
-      <span class="skill-chip">Git & GitHub</span>
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <div class="eyebrow">cat about.md</div>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-file">
+      <div class="about-gutter">01<br>02<br>03<br>04</div>
+      <div class="about-content">
+        <span class="comment">// B.Tech CSE @ Indus University</span>
+        I'm a Computer Science student focused on <strong>backend engineering</strong> — designing APIs, real-time systems, and data pipelines rather than just interfaces. My day-to-day stack is <strong>Node.js, Prisma, WebSockets, and Django</strong>, and I care as much about how a system holds up under load as how it looks on the surface. Outside solo builds, I work on collaborative projects to get real practice with Git workflows, code review, and shipping as a team.
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Featured Projects</h2>
+  <!-- Skills -->
+  <section id="skills" class="section reveal">
+    <div class="eyebrow">./stack --list</div>
+    <h2 class="section-title">Skills & Tech Stack</h2>
+    <div class="skills-container">
+
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-server"></i> Backend & Databases</h3>
+        <div class="skills-grid">
+          <span class="skill-chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span class="skill-chip"><i class="fa-solid fa-database"></i> Prisma ORM</span>
+          <span class="skill-chip"><i class="fa-brands fa-python"></i> Django</span>
+          <span class="skill-chip"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+          <span class="skill-chip"><i class="fa-solid fa-plug"></i> WebSockets</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3><i class="fa-solid fa-laptop-code"></i> Languages & Tools</h3>
+        <div class="skills-grid">
+          <span class="skill-chip"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="skill-chip"><i class="fa-solid fa-code"></i> C / C++</span>
+          <span class="skill-chip"><i class="fa-brands fa-java"></i> Java</span>
+          <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+          <span class="skill-chip"><i class="fa-brands fa-figma"></i> Figma</span>
+          <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <div class="eyebrow">ls -la ~/projects</div>
+    <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
 
-      <!-- Project 1 -->
       <div class="project-card">
-        <h3>Node.js & Prisma Application</h3>
-        <p>A full-stack backend application with relational database management using Prisma ORM and Node.js.</p>
-        <div class="tags">
-          <span>Node.js</span> <span>Prisma</span> <span>Database</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/priya-code11" target="_blank">View Code Repo</a>
-        </div>
+        <div class="project-path">~/projects/pollstream <span class="project-tag tag-ws">WEBSOCKET</span></div>
+        <h3>PollStream</h3>
+        <p>A synchronized messaging and real-time polling system built on event-driven WebSocket communication with efficient ORM-backed queries.</p>
+        <div class="tags"><span>Node.js</span><span>Prisma</span><span>WebSockets</span></div>
+        <a href="https://github.com/priya-code11/PollStream.git" target="_blank" class="link-btn"><i class="fa-brands fa-github"></i> View source</a>
       </div>
 
-      <!-- Project 2 -->
       <div class="project-card">
-        <h3>Django Web App</h3>
-        <p>A web application built using Django framework with structured routes, modern views, and database models.</p>
-        <div class="tags">
-          <span>Django</span> <span>Python</span> <span>Web</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/priya-code11" target="_blank">View Code Repo</a>
-        </div>
+        <div class="project-path">~/projects/stock-analyzer <span class="project-tag tag-http">DATA APP</span></div>
+        <h3>Stock Analyzer</h3>
+        <p>A finance analytics platform that fetches live market data and renders dynamic charts, in the spirit of Groww, for smart stock tracking.</p>
+        <div class="tags"><span>Django</span><span>Python</span><span>Live Graphs</span></div>
+        <a href="https://github.com/priya-code11/Stock-Analyzer.git" target="_blank" class="link-btn"><i class="fa-brands fa-github"></i> View source</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-path">~/projects/unsaid-wall <span class="project-tag tag-ai">AI · COLLAB</span></div>
+        <h3>Unsaid Wall</h3>
+        <p>An AI-powered safe space where people share thoughts anonymously, with emotion detection, real-time messaging, and coach booking sessions.</p>
+        <div class="tags"><span>AI Emotion Model</span><span>Realtime Chat</span><span>Collaborative</span></div>
+        <a href="https://github.com/kavypdoshi2007-ai/Unsaid-Wall.git" target="_blank" class="link-btn"><i class="fa-brands fa-github"></i> View source</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-path">~/projects/task-manager <span class="project-tag tag-git">GIT WORKFLOW</span></div>
+        <h3>TaskManager</h3>
+        <p>A full-stack collaborative task management app, built to master branching, pull requests, and merge conflict resolution as a team.</p>
+        <div class="tags"><span>Node.js</span><span>React</span><span>Git Workflow</span></div>
+        <a href="https://github.com/priya-code11/TaskManager.git" target="_blank" class="link-btn"><i class="fa-brands fa-github"></i> View source</a>
       </div>
 
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Get In Touch</h2>
-    <p>I'm always open to discussing new opportunities, projects, or collaborations!</p>
-    <div class="contact-links">
-      <a href="mailto:your-email@example.com" class="btn">Email Me</a>
-      <a href="https://github.com/priya-code11" target="_blank" class="btn-outline">GitHub Profile</a>
+  <!-- Contact -->
+  <section id="contact" class="section reveal">
+    <div class="contact-box">
+      <div class="eyebrow" style="justify-content:center;">contact --init</div>
+      <h2>Let's build something together</h2>
+      <p>Open to internships, backend roles, and collaborative projects.</p>
+      <div class="contact-links">
+        <a href="mailto:your-email@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me</a>
+        <a href="https://github.com/priya-code11" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© <span id="year"></span> Priya Prajapati. Built with HTML, CSS & JS.</p>
+    <p>© <span id="year"></span> Priya Prajapati — built with HTML, CSS & JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
