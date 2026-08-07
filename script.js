@@ -100,3 +100,30 @@ if ('IntersectionObserver' in window && !prefersReducedMotion) {
 } else {
   revealEls.forEach(el => el.classList.add('is-visible'));
 }
+// Dynamic Mouse Position & Avatar Eye Tracking
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  // 1. Update background glow position percentages
+  const px = (x / window.innerWidth) * 100;
+  const py = (y / window.innerHeight) * 100;
+  document.documentElement.style.setProperty('--mx', `${px}%`);
+  document.documentElement.style.setProperty('--my', `${py}%`);
+
+  // 2. Make Avatar Pupils Follow Cursor
+  const pupils = document.querySelectorAll('.eye-pupil');
+  pupils.forEach((pupil) => {
+    const rect = pupil.getBoundingClientRect();
+    const pupilX = rect.left + rect.width / 2;
+    const pupilY = rect.top + rect.height / 2;
+
+    const angle = Math.atan2(y - pupilY, x - pupilX);
+    const maxDistance = 5; // Movement radius limit in pixels
+
+    const offsetX = Math.cos(angle) * maxDistance;
+    const offsetY = Math.sin(angle) * maxDistance;
+
+    pupil.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+  });
+});
