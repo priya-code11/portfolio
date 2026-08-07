@@ -7,7 +7,7 @@
   <meta name="description" content="Priya Prajapati — B.Tech CSE student building real-time systems, APIs, and data-driven platforms with Node.js, Django, and Prisma." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -23,128 +23,139 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
-  <!-- Hero -->
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-copy">
       <span class="status-pill"><span class="dot-live"></span> STATUS: OPEN_TO_WORK</span>
       <h1>Priya <span class="accent">Prajapati</span></h1>
       <p class="tagline">Backend & full-stack developer building <strong>real-time systems</strong>, APIs, and data-driven platforms with Node.js, Django, and Prisma.</p>
+      
+      <!-- Interactive Terminal Output Box -->
+      <div class="terminal-window">
+        <div class="terminal-titlebar">
+          <div class="term-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="term-title">bash — 80x24</span>
+        </div>
+        <div class="terminal-body">
+          <div class="term-line"><span class="term-prompt">priya@dev:~$</span> <span class="term-cmd">whoami</span></div>
+          <div id="typed-output"></div>
+        </div>
+      </div>
+
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> View Projects</a>
         <a href="https://github.com/priya-code11" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
       </div>
     </div>
 
-    <!-- Enhanced Hand-built Vector Avatar -->
-    <!-- Sleek & Stylish Vector Avatar -->
-    <div class="hero-avatar-wrapper" aria-label="Stylized vector illustration of a developer">
+    <!-- Redesigned Developer Avatar Vector -->
+    <div class="hero-avatar-wrapper" aria-label="Stylized tech vector illustration of a developer">
       <svg class="hero-avatar" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Background Glows -->
-          <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#ffb454" stop-opacity="0.2"/>
-            <stop offset="60%" stop-color="#5ec9c0" stop-opacity="0.08"/>
+          <radialGradient id="avatarGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#5ec9c0" stop-opacity="0.25"/>
+            <stop offset="50%" stop-color="#ffb454" stop-opacity="0.12"/>
             <stop offset="100%" stop-color="#0a0d12" stop-opacity="0"/>
           </radialGradient>
 
-          <!-- Hair Highlight Gradient -->
-          <linearGradient id="hairHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#2d3748"/>
-            <stop offset="100%" stop-color="#1a202c"/>
+          <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5ec9c0"/>
+            <stop offset="100%" stop-color="#ffb454"/>
           </linearGradient>
 
-          <!-- Hoodie Gradient -->
-          <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#ffb454"/>
-            <stop offset="100%" stop-color="#e09234"/>
+          <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#0f172a"/>
           </linearGradient>
 
-          <!-- Soft Drop Shadow -->
-          <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+          <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#0f172a"/>
+          </linearGradient>
+
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+          </filter>
+
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
           </filter>
         </defs>
 
-        <!-- Ambient Backdrop -->
-        <circle cx="250" cy="240" r="200" fill="url(#bgGlow)"/>
-        <circle cx="250" cy="240" r="165" fill="#10141b" stroke="rgba(255, 255, 255, 0.06)" stroke-width="2"/>
+        <!-- Glow Ring backdrop -->
+        <circle cx="250" cy="250" r="210" fill="url(#avatarGlow)"/>
+        <circle cx="250" cy="250" r="180" fill="#10141b" stroke="url(#cyberGradient)" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+        <circle cx="250" cy="250" r="160" fill="#0d1116" stroke="rgba(255, 255, 255, 0.05)" stroke-width="2"/>
 
         <!-- Floating Skill Badges -->
-        <g class="float-badge b1" filter="url(#softShadow)">
-          <rect x="40" y="80" width="95" height="36" rx="18" fill="#161b22" stroke="#5ec9c0" stroke-width="1.5"/>
-          <text x="87" y="103" fill="#5ec9c0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Node.js</text>
+        <g class="float-badge b1" filter="url(#shadow)">
+          <rect x="35" y="75" width="105" height="38" rx="19" fill="#10141b" stroke="#5ec9c0" stroke-width="1.5"/>
+          <text x="87" y="99" fill="#5ec9c0" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Node.js</text>
         </g>
 
-        <g class="float-badge b2" filter="url(#softShadow)">
-          <rect x="360" y="100" width="90" height="36" rx="18" fill="#161b22" stroke="#ffb454" stroke-width="1.5"/>
-          <text x="405" y="123" fill="#ffb454" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Python</text>
+        <g class="float-badge b2" filter="url(#shadow)">
+          <rect x="360" y="90" width="100" height="38" rx="19" fill="#10141b" stroke="#ffb454" stroke-width="1.5"/>
+          <text x="410" y="114" fill="#ffb454" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Python</text>
         </g>
 
-        <g class="float-badge b3" filter="url(#softShadow)">
-          <rect x="345" y="270" width="115" height="36" rx="18" fill="#161b22" stroke="#5ec9c0" stroke-width="1.5"/>
-          <text x="402" y="293" fill="#5ec9c0" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle">WebSockets</text>
+        <g class="float-badge b3" filter="url(#shadow)">
+          <rect x="345" y="340" width="120" height="38" rx="19" fill="#10141b" stroke="#5ec9c0" stroke-width="1.5"/>
+          <text x="405" y="364" fill="#5ec9c0" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle">WebSockets</text>
         </g>
 
-        <g class="float-badge b4" filter="url(#softShadow)">
-          <rect x="35" y="260" width="90" height="36" rx="18" fill="#161b22" stroke="#ffb454" stroke-width="1.5"/>
-          <text x="80" y="283" fill="#ffb454" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Prisma</text>
+        <g class="float-badge b4" filter="url(#shadow)">
+          <rect x="40" y="330" width="100" height="38" rx="19" fill="#10141b" stroke="#ffb454" stroke-width="1.5"/>
+          <text x="90" y="354" fill="#ffb454" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">Prisma</text>
         </g>
 
-        <!-- PORTRAIT CHARACTER -->
-        <!-- Hair Back Layer (Long Flowing Hair) -->
-        <path d="M 155 220 C 140 330, 160 380, 175 410 L 325 410 C 340 380, 360 330, 345 220 C 340 130, 160 130, 155 220 Z" fill="#11161d" />
+        <!-- AVATAR CHARACTER -->
+        <!-- Hair Base -->
+        <path d="M 150 260 C 130 150, 200 90, 250 90 C 300 90, 370 150, 350 260 C 340 330, 360 380, 370 410 L 130 410 C 140 380, 160 330, 150 260 Z" fill="url(#hairGrad)" />
 
-        <!-- Neck & Shoulders -->
-        <path d="M 140 410 C 140 345, 360 345, 360 410 Z" fill="url(#hoodieGrad)" />
-        <path d="M 225 320 L 250 365 L 275 320 Z" fill="#c47a21" /> <!-- Collar -->
-        <rect x="233" y="260" width="34" height="65" rx="12" fill="#f1b593" /> <!-- Neck -->
-        <path d="M 233 300 Q 250 312 267 300 Z" fill="#dd9c77" opacity="0.6"/> <!-- Neck Shadow -->
+        <!-- Body / Jacket -->
+        <path d="M 130 420 C 130 350, 370 350, 370 420 L 390 480 L 110 480 Z" fill="url(#jacketGrad)" stroke="#1e293b" stroke-width="2"/>
+        <!-- Hoodie Neon Accent Inner -->
+        <path d="M 200 420 L 250 470 L 300 420 L 270 360 L 230 360 Z" fill="#0d1116" stroke="#ffb454" stroke-width="2"/>
+
+        <!-- Neck -->
+        <rect x="230" y="310" width="40" height="60" rx="10" fill="#f3c8ac" />
+        <path d="M 230 335 Q 250 345 270 335 Z" fill="#e2b091" opacity="0.7"/>
 
         <!-- Head Contour -->
-        <path d="M 205 210 C 205 160, 295 160, 295 210 C 295 260, 275 285, 250 285 C 225 285, 205 260, 205 210 Z" fill="#f8c3a5" />
+        <path d="M 195 210 C 195 150, 305 150, 305 210 C 305 270, 280 320, 250 320 C 220 320, 195 270, 195 210 Z" fill="#fcd7c1" />
 
-        <!-- Facial Features -->
-        <!-- Eyebrows -->
-        <path d="M 218 198 Q 230 193 238 198" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" />
-        <path d="M 262 198 Q 270 193 282 198" fill="none" stroke="#2d3748" stroke-width="2.5" stroke-linecap="round" />
+        <!-- Glasses / Tech Visor Frame -->
+        <rect x="202" y="200" width="42" height="28" rx="6" fill="#10141b" stroke="#5ec9c0" stroke-width="2.5"/>
+        <rect x="256" y="200" width="42" height="28" rx="6" fill="#10141b" stroke="#5ec9c0" stroke-width="2.5"/>
+        <line x1="244" y1="212" x2="256" y2="212" stroke="#5ec9c0" stroke-width="2.5"/>
+        
+        <!-- Glass Lens Highlights -->
+        <line x1="207" y1="205" x2="222" y2="223" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+        <line x1="261" y1="205" x2="276" y2="223" stroke="#ffffff" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
 
-        <!-- Eyes & Eyelashes -->
-        <ellipse cx="228" cy="210" rx="6" ry="7" fill="#1a202c" />
-        <ellipse cx="272" cy="210" rx="6" ry="7" fill="#1a202c" />
-        <circle cx="230" cy="208" r="2" fill="#ffffff" /> <!-- Pupil Highlight -->
-        <circle cx="274" cy="208" r="2" fill="#ffffff" />
-        <path d="M 220 205 Q 228 200 236 205" fill="none" stroke="#1a202c" stroke-width="2" />
-        <path d="M 264 205 Q 272 200 280 205" fill="none" stroke="#1a202c" stroke-width="2" />
+        <!-- Nose & Smile -->
+        <path d="M 247 240 Q 250 245 253 240" fill="none" stroke="#e2b091" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M 235 268 Q 250 278 265 268" fill="none" stroke="#e57373" stroke-width="3" stroke-linecap="round" />
 
-        <!-- Cheeks Blush -->
-        <ellipse cx="218" cy="225" rx="8" ry="4" fill="#ff7b7b" opacity="0.25" />
-        <ellipse cx="282" cy="225" rx="8" ry="4" fill="#ff7b7b" opacity="0.25" />
+        <!-- Modern Developer Headset -->
+        <path d="M 188 200 C 188 130, 312 130, 312 200" fill="none" stroke="#ffb454" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+        <rect x="180" y="200" width="16" height="35" rx="8" fill="#ffb454"/>
+        <rect x="304" y="200" width="16" height="35" rx="8" fill="#ffb454"/>
+        <!-- Headset Mic -->
+        <path d="M 188 225 Q 180 270 220 275" fill="none" stroke="#ffb454" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="222" cy="275" r="4" fill="#5ec9c0" />
 
-        <!-- Nose & Lips -->
-        <path d="M 248 220 Q 250 226 252 220" fill="none" stroke="#e09c78" stroke-width="2" stroke-linecap="round" />
-        <path d="M 240 242 Q 250 250 260 242" fill="none" stroke="#d96b6b" stroke-width="3" stroke-linecap="round" />
-
-        <!-- Stylish Glasses (Teal Wireframe) -->
-        <rect x="210" y="196" width="34" height="26" rx="8" fill="rgba(94, 201, 192, 0.08)" stroke="#5ec9c0" stroke-width="2.5"/>
-        <rect x="256" y="196" width="34" height="26" rx="8" fill="rgba(94, 201, 192, 0.08)" stroke="#5ec9c0" stroke-width="2.5"/>
-        <line x1="244" y1="206" x2="256" y2="206" stroke="#5ec9c0" stroke-width="2.5"/>
-        <line x1="198" y1="204" x2="210" y2="204" stroke="#5ec9c0" stroke-width="2"/>
-        <line x1="290" y1="204" x2="302" y2="204" stroke="#5ec9c0" stroke-width="2"/>
-
-        <!-- Hair Front (Modern Side Part & Waves) -->
-        <path d="M 200 210 C 195 150, 260 135, 295 160 C 305 180, 300 210, 298 230 C 290 195, 275 170, 248 185 C 225 198, 210 180, 200 210 Z" fill="url(#hairHighlight)" />
-        <path d="M 195 215 C 192 245, 185 285, 205 320 C 195 280, 200 240, 205 210 Z" fill="#1a202c" />
-
-        <!-- Over-Ear Headphones (Tech Vibe) -->
-        <rect x="190" y="200" width="12" height="28" rx="6" fill="#5ec9c0" />
-        <rect x="298" y="200" width="12" height="28" rx="6" fill="#5ec9c0" />
-        <path d="M 196 200 C 196 145, 304 145, 304 200" fill="none" stroke="#2d3748" stroke-width="5" stroke-linecap="round"/>
+        <!-- Front Hair Locks -->
+        <path d="M 195 190 C 210 140, 260 140, 250 180 Z" fill="url(#hairGrad)"/>
+        <path d="M 305 190 C 290 140, 240 140, 250 180 Z" fill="url(#hairGrad)"/>
       </svg>
     </div>
   </header>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="section reveal">
     <div class="eyebrow">cat about.md</div>
     <h2 class="section-title">About Me</h2>
@@ -157,7 +168,7 @@
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills Section -->
   <section id="skills" class="section reveal">
     <div class="eyebrow">./stack --list</div>
     <h2 class="section-title">Skills & Tech Stack</h2>
@@ -189,7 +200,7 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects" class="section reveal">
     <div class="eyebrow">ls -la ~/projects</div>
     <h2 class="section-title">Featured Projects</h2>
@@ -230,7 +241,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="section reveal">
     <div class="contact-box">
       <div class="eyebrow" style="justify-content:center;">contact --init</div>

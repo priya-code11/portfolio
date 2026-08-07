@@ -1,9 +1,7 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ---------------------------------------------------------------
 // Terminal typewriter — types out a "whoami" style response
-// ---------------------------------------------------------------
 const output = document.getElementById('typed-output');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -34,7 +32,6 @@ function typeLines() {
 
     const line = lines[lineIndex];
     const full = `<span class="k">${line.k}</span>: <span class="v">${line.v}</span>`;
-    // type the plain-text version, then swap in styled spans once the line completes
     const plain = `${line.k}: ${line.v}`;
 
     if (charIndex <= plain.length) {
@@ -60,9 +57,33 @@ if (output) {
   }
 }
 
-// ---------------------------------------------------------------
-// Scroll reveal (replaces AOS dependency)
-// ---------------------------------------------------------------
+// Cursor-reactive ambient background glow
+if (!prefersReducedMotion) {
+  const root = document.documentElement;
+  let rafId = null;
+  let pendingX = 50;
+  let pendingY = 35;
+
+  window.addEventListener('mousemove', (e) => {
+    pendingX = (e.clientX / window.innerWidth) * 100;
+    pendingY = (e.clientY / window.innerHeight) * 100;
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      root.style.setProperty('--mx', pendingX + '%');
+      root.style.setProperty('--my', pendingY + '%');
+      rafId = null;
+    });
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    const t = e.touches[0];
+    if (!t) return;
+    root.style.setProperty('--mx', (t.clientX / window.innerWidth) * 100 + '%');
+    root.style.setProperty('--my', (t.clientY / window.innerHeight) * 100 + '%');
+  }, { passive: true });
+}
+
+// Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window && !prefersReducedMotion) {
